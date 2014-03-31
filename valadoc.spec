@@ -1,30 +1,30 @@
 Summary:	Documentation tool for Vala
 Summary(pl.UTF-8):	Narzędzie obsługujące dokumentację dla języka Vala
 Name:		valadoc
-Version:	0.3.2
-%define	snap	20120223
+Version:	0.23.2
+%define	snap	20140326
 Release:	0.%{snap}.1
 License:	LGPL v2.1+
 Group:		Development/Tools
 # git clone git://git.gnome.org/valadoc
-Source0:	%{name}.tar.xz
-# Source0-md5:	c628fb81342eed958c6bdc63966528a2
+Source0:	%{name}-%{snap}.tar.xz
+# Source0-md5:	aa95522b332490572589043259f2c702
 URL:		https://live.gnome.org/Valadoc
-BuildRequires:	autoconf >= 2.59
-BuildRequires:	automake
+BuildRequires:	autoconf >= 2.65
+BuildRequires:	automake >= 1:1.11
 BuildRequires:	gdk-pixbuf2-devel >= 2.0
-BuildRequires:	glib2-devel >= 1:2.12.0
+BuildRequires:	glib2-devel >= 1:2.24.0
 BuildRequires:	graphviz-devel >= 2.16
-BuildRequires:	libgee0.6-devel >= 0.5
-BuildRequires:	libtool
-BuildRequires:	pkgconfig
+BuildRequires:	libgee-devel >= 0.8.0
+BuildRequires:	libtool >= 2:2
+BuildRequires:	pkgconfig >= 1:0.21
 BuildRequires:	tar >= 1:1.22
-BuildRequires:	vala >= 2:0.18
-BuildRequires:	vala-libgee0.6 >= 0.5
+BuildRequires:	vala >= 2:0.24
+BuildRequires:	vala-libgee >= 0.8
 BuildRequires:	xz
-Requires:	glib2 >= 1:2.12.0
+Requires:	glib2 >= 1:2.24.0
 Requires:	graphviz >= 2.16
-Requires:	libgee0.6 >= 0.5
+Requires:	libgee >= 0.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,9 +38,9 @@ Summary:	Header file for Valadoc library
 Summary(pl.UTF-8):	Plik nagłówkowy biblioteki Valadoc
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	glib2-devel >= 1:2.12.0
+Requires:	glib2-devel >= 1:2.24.0
 Requires:	graphviz-devel >= 2.16
-Requires:	libgee0.6-devel >= 0.5
+Requires:	libgee-devel >= 0.8
 
 %description devel
 Header file for Valadoc library.
@@ -53,8 +53,8 @@ Summary:	Vala API for Valadoc library
 Summary(pl.UTF-8):	API języka Vala do biblioteki Valadoc
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
-Requires:	vala >= 2:0.18
-Requires:	vala-libgee0.6 >= 0.5
+Requires:	vala >= 2:0.24
+Requires:	vala-libgee >= 0.8
 
 %description -n vala-valadoc
 Vala API for Valadoc library.
@@ -107,8 +107,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/valadoc/doclets/html
 %attr(755,root,root) %{_libdir}/valadoc/doclets/html/libdoclet.so
 %dir %{_libdir}/valadoc/drivers
-%dir %{_libdir}/valadoc/drivers/0.18.x
-%attr(755,root,root) %{_libdir}/valadoc/drivers/0.18.x/libdriver.so
+%dir %{_libdir}/valadoc/drivers/0.24.x
+%attr(755,root,root) %{_libdir}/valadoc/drivers/0.24.x/libdriver.so
 %{_datadir}/valadoc
 %{_mandir}/man1/valadoc.1*
 
