@@ -9,7 +9,7 @@ Group:		Development/Tools
 # git clone git://git.gnome.org/valadoc
 Source0:	%{name}-%{snap}.tar.xz
 # Source0-md5:	aa95522b332490572589043259f2c702
-URL:		https://live.gnome.org/Valadoc
+URL:		https://wiki.gnome.org/Projects/Valadoc
 BuildRequires:	autoconf >= 2.65
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	gdk-pixbuf2-devel >= 2.0
