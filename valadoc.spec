@@ -1,9 +1,10 @@
+%define	snap	20140326
+%define	rel	2
 Summary:	Documentation tool for Vala
 Summary(pl.UTF-8):	Narzędzie obsługujące dokumentację dla języka Vala
 Name:		valadoc
 Version:	0.23.2
-%define	snap	20140326
-Release:	0.%{snap}.1
+Release:	0.%{snap}.%{rel}
 License:	LGPL v2.1+
 Group:		Development/Tools
 # git clone git://git.gnome.org/valadoc
