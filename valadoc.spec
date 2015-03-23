@@ -1,15 +1,15 @@
-%define	snap	20141018
+%define	snap	20150323
 %define	rel	1
 Summary:	Documentation tool for Vala
 Summary(pl.UTF-8):	Narzędzie obsługujące dokumentację dla języka Vala
 Name:		valadoc
-Version:	0.23.2
+Version:	0.28.0
 Release:	0.%{snap}.%{rel}
 License:	LGPL v2.1+
 Group:		Development/Tools
 # git clone git://git.gnome.org/valadoc
 Source0:	%{name}-%{snap}.tar.xz
-# Source0-md5:	32ba28fe301120e37e1bd4ee16e91967
+# Source0-md5:	c727e5fc12d2c7795d1d0409b4d950d4
 URL:		https://wiki.gnome.org/Projects/Valadoc
 BuildRequires:	autoconf >= 2.65
 BuildRequires:	automake >= 1:1.11
@@ -108,8 +108,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/valadoc/doclets/html
 %attr(755,root,root) %{_libdir}/valadoc/doclets/html/libdoclet.so
 %dir %{_libdir}/valadoc/drivers
-%dir %{_libdir}/valadoc/drivers/0.26.x
-%attr(755,root,root) %{_libdir}/valadoc/drivers/0.26.x/libdriver.so
+%dir %{_libdir}/valadoc/drivers/0.28.x
+%attr(755,root,root) %{_libdir}/valadoc/drivers/0.28.x/libdriver.so
 %{_datadir}/valadoc
 %{_mandir}/man1/valadoc.1*
 
