@@ -1,15 +1,13 @@
-%define	snap	20150323
-%define	rel	1
+%define	ver	0.30
 Summary:	Documentation tool for Vala
 Summary(pl.UTF-8):	Narzędzie obsługujące dokumentację dla języka Vala
 Name:		valadoc
-Version:	0.28.0
-Release:	0.%{snap}.%{rel}
+Version:	%{ver}.0
+Release:	1
 License:	LGPL v2.1+
 Group:		Development/Tools
-# git clone git://git.gnome.org/valadoc
-Source0:	%{name}-%{snap}.tar.xz
-# Source0-md5:	c727e5fc12d2c7795d1d0409b4d950d4
+Source0:	https://git.gnome.org/browse/valadoc/snapshot/%{name}-valac-%{ver}.tar.xz
+# Source0-md5:	a20531f3e5eaac5a47eb96ffb1aa0d01
 URL:		https://wiki.gnome.org/Projects/Valadoc
 BuildRequires:	autoconf >= 2.65
 BuildRequires:	automake >= 1:1.11
@@ -20,7 +18,7 @@ BuildRequires:	libgee-devel >= 0.8.0
 BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig >= 1:0.21
 BuildRequires:	tar >= 1:1.22
-BuildRequires:	vala >= 2:0.24
+BuildRequires:	vala >= 2:0.16
 BuildRequires:	vala-libgee >= 0.8
 BuildRequires:	xz
 Requires:	glib2 >= 1:2.24.0
@@ -54,7 +52,7 @@ Summary:	Vala API for Valadoc library
 Summary(pl.UTF-8):	API języka Vala do biblioteki Valadoc
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
-Requires:	vala >= 2:0.24
+Requires:	vala >= 2:0.26
 Requires:	vala-libgee >= 0.8
 
 %description -n vala-valadoc
@@ -64,7 +62,7 @@ Vala API for Valadoc library.
 API języka Vala do biblioteki Valadoc.
 
 %prep
-%setup -q -n %{name}
+%setup -q -n %{name}-valac-%{ver}
 
 %build
 %{__libtoolize}
@@ -108,8 +106,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/valadoc/doclets/html
 %attr(755,root,root) %{_libdir}/valadoc/doclets/html/libdoclet.so
 %dir %{_libdir}/valadoc/drivers
-%dir %{_libdir}/valadoc/drivers/0.28.x
-%attr(755,root,root) %{_libdir}/valadoc/drivers/0.28.x/libdriver.so
+%dir %{_libdir}/valadoc/drivers/0.*.x
+%attr(755,root,root) %{_libdir}/valadoc/drivers/0.*.x/libdriver.so
 %{_datadir}/valadoc
 %{_mandir}/man1/valadoc.1*
 
