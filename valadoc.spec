@@ -106,8 +106,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/valadoc/doclets/html
 %attr(755,root,root) %{_libdir}/valadoc/doclets/html/libdoclet.so
 %dir %{_libdir}/valadoc/drivers
-%dir %{_libdir}/valadoc/drivers/0.*.x
-%attr(755,root,root) %{_libdir}/valadoc/drivers/0.*.x/libdriver.so
+%dir %{_libdir}/valadoc/drivers/%{ver}.x
+%attr(755,root,root) %{_libdir}/valadoc/drivers/%{ver}.x/libdriver.so
 %{_datadir}/valadoc
 %{_mandir}/man1/valadoc.1*
 
