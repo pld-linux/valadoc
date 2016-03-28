@@ -3,7 +3,7 @@ Summary:	Documentation tool for Vala
 Summary(pl.UTF-8):	Narzędzie obsługujące dokumentację dla języka Vala
 Name:		valadoc
 Version:	%{ver}.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Development/Tools
 Source0:	https://git.gnome.org/browse/valadoc/snapshot/%{name}-valac-%{ver}.tar.xz
@@ -54,6 +54,9 @@ Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Requires:	vala >= 2:0.26
 Requires:	vala-libgee >= 0.8
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description -n vala-valadoc
 Vala API for Valadoc library.
