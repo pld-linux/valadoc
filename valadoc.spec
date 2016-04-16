@@ -3,11 +3,12 @@ Summary:	Documentation tool for Vala
 Summary(pl.UTF-8):	Narzędzie obsługujące dokumentację dla języka Vala
 Name:		valadoc
 Version:	%{ver}.0
-Release:	2
+Release:	3
 License:	LGPL v2.1+
 Group:		Development/Tools
 Source0:	https://git.gnome.org/browse/valadoc/snapshot/%{name}-valac-%{ver}.tar.xz
 # Source0-md5:	a20531f3e5eaac5a47eb96ffb1aa0d01
+Patch0:		vala-0.32.patch
 URL:		https://wiki.gnome.org/Projects/Valadoc
 BuildRequires:	autoconf >= 2.65
 BuildRequires:	automake >= 1:1.11
@@ -66,6 +67,7 @@ API języka Vala do biblioteki Valadoc.
 
 %prep
 %setup -q -n %{name}-valac-%{ver}
+%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -109,8 +111,10 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/valadoc/doclets/html
 %attr(755,root,root) %{_libdir}/valadoc/doclets/html/libdoclet.so
 %dir %{_libdir}/valadoc/drivers
-%dir %{_libdir}/valadoc/drivers/%{ver}.x
-%attr(755,root,root) %{_libdir}/valadoc/drivers/%{ver}.x/libdriver.so
+#%dir %{_libdir}/valadoc/drivers/%{ver}.x
+#%attr(755,root,root) %{_libdir}/valadoc/drivers/%{ver}.x/libdriver.so
+%dir %{_libdir}/valadoc/drivers/0.32.x
+%attr(755,root,root) %{_libdir}/valadoc/drivers/0.32.x/libdriver.so
 %{_datadir}/valadoc
 %{_mandir}/man1/valadoc.1*
 
