@@ -1,15 +1,12 @@
-%define	ver	0.30
 Summary:	Documentation tool for Vala
 Summary(pl.UTF-8):	Narzędzie obsługujące dokumentację dla języka Vala
 Name:		valadoc
-Version:	%{ver}.0
-Release:	4
+Version:	0.35.0
+Release:	1
 License:	LGPL v2.1+
 Group:		Development/Tools
-Source0:	https://git.gnome.org/browse/valadoc/snapshot/%{name}-valac-%{ver}.tar.xz
-# Source0-md5:	a20531f3e5eaac5a47eb96ffb1aa0d01
-Patch0:		vala-0.32.patch
-Patch1:		vala-0.34.patch
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/valadoc/0.35/%{name}-%{version}.tar.xz
+# Source0-md5:	f92c6b4d5d51202dc6b27462d16aafe7
 URL:		https://wiki.gnome.org/Projects/Valadoc
 BuildRequires:	autoconf >= 2.65
 BuildRequires:	automake >= 1:1.11
@@ -20,7 +17,7 @@ BuildRequires:	libgee-devel >= 0.8.0
 BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig >= 1:0.21
 BuildRequires:	tar >= 1:1.22
-BuildRequires:	vala >= 2:0.16
+BuildRequires:	vala >= 2:0.34
 BuildRequires:	vala-libgee >= 0.8
 BuildRequires:	xz
 Requires:	glib2 >= 1:2.24.0
@@ -67,9 +64,7 @@ Vala API for Valadoc library.
 API języka Vala do biblioteki Valadoc.
 
 %prep
-%setup -q -n %{name}-valac-%{ver}
-%patch0 -p1
-%patch1 -p1
+%setup -q
 
 %build
 %{__libtoolize}
@@ -100,7 +95,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS MAINTAINERS THANKS
+%doc AUTHORS THANKS
 %attr(755,root,root) %{_bindir}/valadoc
 %attr(755,root,root) %{_libdir}/libvaladoc.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libvaladoc.so.0
@@ -113,8 +108,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/valadoc/doclets/html
 %attr(755,root,root) %{_libdir}/valadoc/doclets/html/libdoclet.so
 %dir %{_libdir}/valadoc/drivers
-#%dir %{_libdir}/valadoc/drivers/%{ver}.x
-#%attr(755,root,root) %{_libdir}/valadoc/drivers/%{ver}.x/libdriver.so
 %dir %{_libdir}/valadoc/drivers/0.34.x
 %attr(755,root,root) %{_libdir}/valadoc/drivers/0.34.x/libdriver.so
 %{_datadir}/valadoc
