@@ -2,7 +2,7 @@ Summary:	Documentation tool for Vala
 Summary(pl.UTF-8):	Narzędzie obsługujące dokumentację dla języka Vala
 Name:		valadoc
 Version:	0.35.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Development/Tools
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/valadoc/0.35/%{name}-%{version}.tar.xz
@@ -17,7 +17,7 @@ BuildRequires:	libgee-devel >= 0.8.0
 BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig >= 1:0.21
 BuildRequires:	tar >= 1:1.22
-BuildRequires:	vala >= 2:0.34
+BuildRequires:	vala >= 2:0.36
 BuildRequires:	vala-libgee >= 0.8
 BuildRequires:	xz
 Requires:	glib2 >= 1:2.24.0
@@ -108,8 +108,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/valadoc/doclets/html
 %attr(755,root,root) %{_libdir}/valadoc/doclets/html/libdoclet.so
 %dir %{_libdir}/valadoc/drivers
-%dir %{_libdir}/valadoc/drivers/0.34.x
-%attr(755,root,root) %{_libdir}/valadoc/drivers/0.34.x/libdriver.so
+%dir %{_libdir}/valadoc/drivers/0.36.x
+%attr(755,root,root) %{_libdir}/valadoc/drivers/0.36.x/libdriver.so
 %{_datadir}/valadoc
 %{_mandir}/man1/valadoc.1*
 
