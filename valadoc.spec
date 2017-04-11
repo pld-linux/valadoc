@@ -1,28 +1,28 @@
 Summary:	Documentation tool for Vala
 Summary(pl.UTF-8):	Narzędzie obsługujące dokumentację dla języka Vala
 Name:		valadoc
-Version:	0.35.0
-Release:	2
+Version:	0.36.0
+Release:	1
 License:	LGPL v2.1+
 Group:		Development/Tools
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/valadoc/0.35/%{name}-%{version}.tar.xz
-# Source0-md5:	f92c6b4d5d51202dc6b27462d16aafe7
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/valadoc/0.36/%{name}-%{version}.tar.xz
+# Source0-md5:	b52f7400db0bbb8d1f5ac512d842283f
 URL:		https://wiki.gnome.org/Projects/Valadoc
 BuildRequires:	autoconf >= 2.65
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	gdk-pixbuf2-devel >= 2.0
 BuildRequires:	glib2-devel >= 1:2.24.0
 BuildRequires:	graphviz-devel >= 2.16
-BuildRequires:	libgee-devel >= 0.8.0
+BuildRequires:	libgee-devel >= 0.20.0
 BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig >= 1:0.21
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	vala >= 2:0.36
-BuildRequires:	vala-libgee >= 0.8
+BuildRequires:	vala-libgee >= 0.20
 BuildRequires:	xz
 Requires:	glib2 >= 1:2.24.0
 Requires:	graphviz >= 2.16
-Requires:	libgee >= 0.8
+Requires:	libgee >= 0.20
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,7 +38,7 @@ Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	glib2-devel >= 1:2.24.0
 Requires:	graphviz-devel >= 2.16
-Requires:	libgee-devel >= 0.8
+Requires:	libgee-devel >= 0.20
 
 %description devel
 Header file for Valadoc library.
@@ -52,7 +52,7 @@ Summary(pl.UTF-8):	API języka Vala do biblioteki Valadoc
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Requires:	vala >= 2:0.26
-Requires:	vala-libgee >= 0.8
+Requires:	vala-libgee >= 0.20
 %if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
 %endif
