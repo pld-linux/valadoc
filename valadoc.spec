@@ -1,8 +1,9 @@
+# NOTE: for versions >= 0.38 see vala.spec
 Summary:	Documentation tool for Vala
 Summary(pl.UTF-8):	Narzędzie obsługujące dokumentację dla języka Vala
 Name:		valadoc
 Version:	0.36.0
-Release:	1
+Release:	1.1
 License:	LGPL v2.1+
 Group:		Development/Tools
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/valadoc/0.36/%{name}-%{version}.tar.xz
