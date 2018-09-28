@@ -2,18 +2,19 @@
 Summary:	Documentation tool for Vala
 Summary(pl.UTF-8):	Narzędzie obsługujące dokumentację dla języka Vala
 Name:		valadoc
-Version:	0.36.0
-Release:	1.1
+Version:	0.36.2
+Release:	0.1
 License:	LGPL v2.1+
 Group:		Development/Tools
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/valadoc/0.36/%{name}-%{version}.tar.xz
-# Source0-md5:	b52f7400db0bbb8d1f5ac512d842283f
+# Source0-md5:	cd62baa5d6d3321e1f86e43ef596be98
 URL:		https://wiki.gnome.org/Projects/Valadoc
 BuildRequires:	autoconf >= 2.65
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	gdk-pixbuf2-devel >= 2.0
 BuildRequires:	glib2-devel >= 1:2.24.0
 BuildRequires:	graphviz-devel >= 2.16
+BuildRequires:	help2man
 BuildRequires:	libgee-devel >= 0.20.0
 BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig >= 1:0.21
