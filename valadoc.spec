@@ -55,9 +55,7 @@ Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Requires:	vala >= 2:0.26
 Requires:	vala-libgee >= 0.20
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description -n vala-valadoc
 Vala API for Valadoc library.
